@@ -50,6 +50,7 @@ type CheckTypePredicates = Pick<
     | 'date'
     | 'function'
     | 'hasLength'
+    | 'containsKey'
 >;
 
 interface ArrayFunction {
@@ -137,6 +138,7 @@ interface CheckType {
     object: ObjectFunction;
     emptyObject(a: any): boolean;
     nonEmptyObject(a: any): boolean;
+    containsKey(a: any, b: 'string'): boolean;
     /**
      * Checking via instanceof
      */
